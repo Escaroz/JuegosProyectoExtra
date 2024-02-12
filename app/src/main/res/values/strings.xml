@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Juegos</string>
+    <string name="Juego">Juego</string>
+    <string name="Fecha">Fecha</string>
+    <string name="Género">Género</string>
+
+</resources>
