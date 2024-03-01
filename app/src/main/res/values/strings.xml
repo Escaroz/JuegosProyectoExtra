@@ -3,5 +3,11 @@
     <string name="Juego">Juego</string>
     <string name="Fecha">Fecha</string>
     <string name="Género">Género</string>
+    <string name="Bienvenido">Bienvenido a Nintendo games!</string>
+    <string name="Resumen">Resumen sobre los juegos de Nintendo!</string>
+    <string name="Nintendotexto1">Los juegos de Nintendo son bastante populares debido a lo entretenidos que son. Siga deslizando si quiere descubrir más sobre estos videojuegos.</string>
+    <string name="Nintendotexto2">Mario y Zelda hasta los innovadores como Splatoon y Animal Crossing, Nintendo ofrece experiencias únicas para jugadores de todas las edades.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

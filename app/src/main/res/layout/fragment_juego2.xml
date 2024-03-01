@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".Juego2Fragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imageViewNintendo"
+            android:layout_width="259dp"
+            android:layout_height="270dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/pokemon" />
+
+        <TextView
+            android:id="@+id/textViewNintendoInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageViewNintendo"
+            android:layout_centerHorizontal="true"
+            android:text="@string/Nintendotexto2"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textViewHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewNintendoInfo"
+            android:layout_marginTop="202dp"
+            android:text="Pulsa en el botón para seguir conociendo más"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btn_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Haz clic aquí"
+            android:textColor="@android:color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="32dp" />
+
+    </RelativeLayout>
+
+</FrameLayout>
