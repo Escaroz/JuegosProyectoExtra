@@ -7,7 +7,46 @@
     <string name="Resumen">Resumen sobre los juegos de Nintendo!</string>
     <string name="Nintendotexto1">Los juegos de Nintendo son bastante populares debido a lo entretenidos que son. Siga deslizando si quiere descubrir más sobre estos videojuegos.</string>
     <string name="Nintendotexto2">Mario y Zelda hasta los innovadores como Splatoon y Animal Crossing, Nintendo ofrece experiencias únicas para jugadores de todas las edades.</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="item_list_title">- JUEGOS -</string>
+
+    <!-- UserInfoFragment -->
+    <string name="user_info_title">- USUARIO -</string>
+    <string name="user_name">Nombre de usuario: %s</string>
+    <string name="user_fav_Count0">Ninun juego marcado como favorito</string>
+    <string name="user_fav_Count1">%s juego marcado como favorito</string>
+    <string name="user_fav_Count">%s juegos marcados como favoritos</string>
+
+
+    <string name="btnPerfil">Perfil</string>
+
+    <string name="btnFavoritos">Favoritos</string>
+
+    <string name="Juegos">Juegos</string>
+    <string name="Favoritos">Favoritos</string>
+    <string name="Usuarios">Usuarios</string>
+    <string name="Información">Información</string>
+    <string name="Información2">Información2</string>
+    <string name="Menu">Menu</string>
+    <string name="JuegoNintendo">JuegoNintendo</string>
+
+    <string name="bottom_nav_menu">bottom_nav_menu</string>
+
+    <string name="juego">juego</string>
+    <string name="genero">genero</string>
+    <string name="fecha">fecha</string>
+    <string name="foto">foto</string>
+
+    <string name="NombreUsuario">Nombre de usuario: Carlos</string>
+    <string name="Text">Todavia no has marcado ningún juego como favorito.</string>
+
+
+
+
+
+
+
 
 </resources>

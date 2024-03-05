@@ -1,6 +1,7 @@
 package com.marisma.juegos
 
 class JuegoProvider{
+
     companion object{
 val listaJuegosNintendo = listOf<Datos>(
     Datos(
@@ -64,5 +65,6 @@ val listaJuegosNintendo = listOf<Datos>(
 
     )
           }
+
 
               }

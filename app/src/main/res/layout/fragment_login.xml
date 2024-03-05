@@ -15,7 +15,7 @@
         tools:context=".MainActivity">
 
         <TextView
-            android:layout_width="347dp"
+            android:layout_width="317dp"
             android:layout_height="wrap_content"
             android:layout_weight="20"
             android:text="@string/Bienvenido"
@@ -24,7 +24,7 @@
 
         <ImageView
             android:layout_width="235dp"
-            android:layout_height="349dp"
+            android:layout_height="304dp"
             android:layout_weight="40"
             android:src="@drawable/nintendo" />
 

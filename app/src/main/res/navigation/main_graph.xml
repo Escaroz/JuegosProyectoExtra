@@ -13,16 +13,22 @@
     <fragment
         android:id="@+id/menuFragment"
         android:name="com.marisma.juegos.adapter.MenuFragment"
-        android:label="fragment_menu"
+        android:label="@string/Menu"
         tools:layout="@layout/fragment_menu" >
         <action
             android:id="@+id/action_menuFragment_to_reciclerViewFragment"
             app:destination="@id/reciclerViewFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_itemListFragment"
+            app:destination="@id/itemListFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.marisma.juegos.adapter.LoginFragment"
-        android:label="LoginFragment" >
+        android:label="@string/Juegos" >
         <action
             android:id="@+id/action_loginFragment_to_viewPagerFragment"
             app:destination="@id/viewPagerFragment" />
@@ -30,13 +36,49 @@
     <fragment
         android:id="@+id/viewPagerFragment"
         android:name="com.marisma.juegos.ViewPagerFragment"
-        android:label="ViewPagerFragment" >
+        android:label="@string/Información" >
         <action
             android:id="@+id/action_viewPagerFragment_to_menuFragment"
             app:destination="@id/menuFragment" />
     </fragment>
     <activity
         android:id="@+id/reciclerViewFragment"
-        android:name="com.marisma.juegos.ReciclerViewFragment"
+        android:name="com.marisma.juegos.ReciclerViewActivity"
         android:label="ReciclerViewFragment" />
+    <fragment
+        android:id="@+id/itemListFragment"
+        android:name="com.marisma.juegos.ItemListFragment"
+        android:label="ItemListFragment"
+        app:uri="android-app://com.marisma.juegos/itemListFragment">
+        <action
+            android:id="@+id/action_itemListFragment_to_userInfoFragment"
+            app:destination="@id/userInfoFragment" />
+        <action
+            android:id="@+id/action_itemListFragment_to_detailItemFragment"
+            app:destination="@id/detailItemFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userInfoFragment"
+        android:name="com.marisma.juegos.adapter.UserInfoFragment"
+        android:label="@string/Usuarios"
+        app:uri="android-app://com.marisma.juegos/userInfoFragment">
+        <action
+            android:id="@+id/action_userInfoFragment_to_favItemListFragment"
+            app:destination="@id/favItemListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favItemListFragment"
+        android:name="com.marisma.juegos.adapter.FavItemListFragment"
+        android:label="@string/Favoritos"
+        tools:layout="@layout/fragment_fav_item_list">
+        <deepLink app:uri="android-app://com.marisma.juegos/favItemListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailItemFragment"
+        android:name="com.marisma.juegos.adapter.DetailItemFragment"
+        android:label="@string/JuegoNintendo"
+        tools:layout="@layout/fragment_detail_item" />
+
 </navigation>

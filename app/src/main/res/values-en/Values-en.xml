@@ -8,12 +8,41 @@
     <string name="Resumen">Summary about Nintendo games</string>
     <string name="Nintendotexto1">Nintendo games are quite popular because of how entertaining they are. Keep scrolling if you want to discover more about these video games.</string>
     <string name="Nintendotexto2"> Nintendo games are known for their creativity and fun. From classics like Mario and Zelda to innovative ones like Splatoon and Animal Crossing, Nintendo offers unique experiences for players of all ages.
-
-
-
-
-
 </string>
+    <string name="item_list_title">- JUEGOS -</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- UserInfoFragment -->
+    <string name="user_info_title">- USER -</string>
+    <string name="user_name">User name: %s</string>
+    <string name="user_fav_Count0">No games marked as favorite</string>
+    <string name="user_fav_Count1">%s game marked as favorite</string>
+    <string name="user_fav_Count">%s games marked as favorites</string>
+
+    <string name="btnPerfil">Profile</string>
+
+    <string name="btnFavoritos">Favoritos</string>
+
+    <string name="Juegos">Games</string>
+    <string name="Favoritos">Favorites</string>
+    <string name="Usuarios">Users</string>
+    <string name="Información">Information</string>
+    <string name="Información2">Information2</string>
+    <string name="Menu">Menu</string>
+    <string name="JuegoNintendo">NintendoGame</string>
+
+    <string name="bottom_nav_menu">bottom_nav_menu</string>
+
+
+    <string name="juego">game</string>
+    <string name="genero">genre</string>
+    <string name="fecha">date</string>
+    <string name="foto">image</string>
+
+    <string name="NombreUsuario">Username: Carlos</string>
+    <string name="Text">Still, you havent marked any game as favorite.</string>
+
+
+
 </resources>
