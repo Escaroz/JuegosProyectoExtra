@@ -1,15 +1,29 @@
 package com.marisma.juegos
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
+import android.widget.CheckBox
+import android.widget.EditText
+import androidx.datastore.preferences.core.booleanPreferencesKey
+import androidx.datastore.preferences.core.edit
+import androidx.datastore.preferences.core.stringPreferencesKey
+import androidx.datastore.preferences.preferencesDataStore
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.marisma.juegos.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.marisma.juegos.adapter.DetailActivity
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
+val Context.dataStore by preferencesDataStore(name = "USER_PREFERENCES_NAME")
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -18,6 +32,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //Datastore
+
+        val btnSave = findViewById<Button>(R.id.btnSave)
+        val etName = findViewById<EditText>(R.id.etName)
+        val cbVIP = findViewById<CheckBox>(R.id.cbVIP)
+
+        btnSave.setOnClickListener {
+            lifecycleScope.launch(Dispatchers.IO) {
+                saveValues(etName.text.toString(), cbVIP.isChecked)
+            }
+            val intent = Intent(this@MainActivity, DetailActivity::class.java)
+            startActivity(intent) // Agregar esta línea para iniciar DetailActivity
+        }
+
 
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
@@ -37,9 +66,17 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupActionBarWithNavController(this, navController)
     }
 
+
+
     override fun onSupportNavigateUp(): Boolean {
         val navController = this.findNavController(R.id.navHostFragment)
         return navController.navigateUp()
+    }
+    private suspend fun saveValues(name: String, checked: Boolean){
+        dataStore.edit { preferences ->
+            preferences[stringPreferencesKey("name")] = name
+            preferences[booleanPreferencesKey("vip")] = checked
+        }
     }
 }
 

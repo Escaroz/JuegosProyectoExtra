@@ -80,5 +80,10 @@
         android:name="com.marisma.juegos.adapter.DetailItemFragment"
         android:label="@string/JuegoNintendo"
         tools:layout="@layout/fragment_detail_item" />
+    <activity
+        android:id="@+id/detailActivity"
+        android:name="com.marisma.juegos.adapter.DetailActivity"
+        android:label="activity_detail"
+        tools:layout="@layout/activity_detail" />
 
 </navigation>
