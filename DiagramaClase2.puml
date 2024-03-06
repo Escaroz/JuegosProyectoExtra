@@ -1,0 +1,188 @@
+@startuml
+class com.marisma.juegos.ItemListFragment {
+- FragmentItemListBinding? _binding
+-  binding
++ View onCreateView(LayoutInflater,ViewGroup?,Bundle?)
++ void onViewCreated(View,Bundle?)
+- void iniciarRecyclerView()
+- void onItemSelected(Datos)
++ void onDestroyView()
+}
+
+
+class com.marisma.juegos.adapter.UserInfoFragment {
+- FragmentUserInfoBinding? _binding
+-  binding
++ View? onCreateView(LayoutInflater,ViewGroup?,Bundle?)
++ void onViewCreated(View,Bundle?)
+}
+
+
+class com.marisma.juegos.adapter.JuegoViewHolder {
++  binding
++ void render(Datos,(Datos) -> Unit)
+}
+
+
+class com.marisma.juegos.Juego2Fragment {
+- FragmentJuego2Binding? _binding
+-  binding
++ View? onCreateView(LayoutInflater,ViewGroup?,Bundle?)
++ void onDestroyView()
+- void closeFragment()
+}
+
+
+class com.marisma.juegos.adapter.UserProfile {
+}
+class com.marisma.juegos.adapter.DetailItemFragment {
+- FragmentDetailItemBinding? _binding
+-  binding
++ View onCreateView(LayoutInflater,ViewGroup?,Bundle?)
++ void onViewCreated(View,Bundle?)
++ void onDestroyView()
+}
+
+
+class com.marisma.juegos.Datos {
+}
+class com.marisma.juegos.adapter.ViewPagerAdapter {
++ Int getItemCount()
++ Fragment createFragment(Int)
+}
+
+class com.marisma.juegos.adapter.MainFragment {
+- FragmentMainBinding? _binding
+-  binding
++ void onCreate(Bundle?)
++ void onDestroy()
+}
+
+
+class com.marisma.juegos.ReciclerViewActivity {
+- FragmentReciclerViewBinding binding
++ void onCreate(Bundle?)
++ void iniciarRecyclerView()
+- void onItemSelected(Datos)
+}
+
+
+class com.marisma.juegos.adapter.LoginFragment {
+- FragmentLoginBinding? _binding
+-  binding
++ View? onCreateView(LayoutInflater,ViewGroup?,Bundle?)
+}
+
+
+class com.marisma.juegos.adapter.MenuFragment {
+- FragmentMenuBinding? _binding
+-  binding
++ View? onCreateView(LayoutInflater,ViewGroup?,Bundle?)
+}
+
+
+class com.marisma.juegos.adapter.CreditFragment$Companion {
++ void newInstance()
+}
+
+class com.marisma.juegos.adapter.CreditFragment {
+- FragmentCreditBinding? _binding
+-  binding
++ View onCreateView(LayoutInflater,ViewGroup?,Bundle?)
++ void onViewCreated(View,Bundle?)
++ void onDestroyView()
+}
+
+
+class com.marisma.juegos.MainActivity {
+- ActivityMainBinding binding
++ void onCreate(Bundle?)
++ Boolean onSupportNavigateUp()
+- void saveValues(String,Boolean)
+}
+
+
+class com.marisma.juegos.adapter.DetailActivity {
++ void onCreate(Bundle?)
+- void getUserProfile()
+}
+
+class com.marisma.juegos.Juego1Fragment {
+- FragmentJuego1Binding? _binding
+-  binding
++ View? onCreateView(LayoutInflater,ViewGroup?,Bundle?)
+}
+
+
+class com.marisma.clasicalsmusicians.SplashActivity {
++ void onCreate(Bundle?)
+}
+
+class com.marisma.juegos.adapter.JuegoAdapter {
++ JuegoViewHolder onCreateViewHolder(ViewGroup,Int)
++ Int getItemCount()
++ void onBindViewHolder(JuegoViewHolder,Int)
+}
+
+class com.marisma.juegos.adapter.FavItemListFragment$Companion {
++ void newInstance(String,String)
+}
+
+class com.marisma.juegos.adapter.FavItemListFragment {
+- String? param1
+- String? param2
++ void onCreate(Bundle?)
++ View? onCreateView(LayoutInflater,ViewGroup?,Bundle?)
+- void showToast(String)
+}
+
+
+class com.marisma.juegos.ViewPagerFragment {
+- FragmentViewPagerBinding? _binding
+-  binding
++ View? onCreateView(LayoutInflater,ViewGroup?,Bundle?)
+}
+
+
+class com.marisma.juegos.JuegoProvider$Companion {
++  listaJuegosNintendo
+}
+
+class com.marisma.juegos.JuegoProvider {
+}
+class com.marisma.juegos.ReciclerViewFragment {
+- FragmentReciclerView2Binding? _binding
+-  binding
++ View? onCreateView(LayoutInflater,ViewGroup?,Bundle?)
++ void onViewCreated(View,Bundle?)
+- void iniciarRecyclerView()
+- void onItemSelected(Datos)
++ void onDestroyView()
+}
+
+
+
+
+androidx.fragment.app.Fragment <|-- com.marisma.juegos.ItemListFragment
+androidx.fragment.app.Fragment <|-- com.marisma.juegos.adapter.UserInfoFragment
+com.marisma.juegos.adapter.ViewHolder <|-- com.marisma.juegos.adapter.JuegoViewHolder
+androidx.fragment.app.Fragment <|-- com.marisma.juegos.Juego2Fragment
+androidx.fragment.app.Fragment <|-- com.marisma.juegos.adapter.DetailItemFragment
+androidx.viewpager2.adapter.FragmentStateAdapter <|-- com.marisma.juegos.adapter.ViewPagerAdapter
+androidx.appcompat.app.AppCompatActivity <|-- com.marisma.juegos.adapter.MainFragment
+androidx.appcompat.app.AppCompatActivity <|-- com.marisma.juegos.ReciclerViewActivity
+androidx.fragment.app.Fragment <|-- com.marisma.juegos.adapter.LoginFragment
+androidx.fragment.app.Fragment <|-- com.marisma.juegos.adapter.MenuFragment
+com.marisma.juegos.adapter.CreditFragment +.. com.marisma.juegos.adapter.CreditFragment$Companion
+androidx.fragment.app.Fragment <|-- com.marisma.juegos.adapter.CreditFragment
+androidx.appcompat.app.AppCompatActivity <|-- com.marisma.juegos.MainActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.marisma.juegos.adapter.DetailActivity
+androidx.fragment.app.Fragment <|-- com.marisma.juegos.Juego1Fragment
+androidx.appcompat.app.AppCompatActivity <|-- com.marisma.clasicalsmusicians.SplashActivity
+com.marisma.juegos.adapter.Adapter <|-- com.marisma.juegos.adapter.JuegoAdapter
+com.marisma.juegos.adapter.FavItemListFragment +.. com.marisma.juegos.adapter.FavItemListFragment$Companion
+androidx.fragment.app.Fragment <|-- com.marisma.juegos.adapter.FavItemListFragment
+androidx.fragment.app.Fragment <|-- com.marisma.juegos.ViewPagerFragment
+com.marisma.juegos.JuegoProvider +.. com.marisma.juegos.JuegoProvider$Companion
+androidx.fragment.app.Fragment <|-- com.marisma.juegos.ReciclerViewFragment
+@enduml
